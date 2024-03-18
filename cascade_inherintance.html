@@ -1,0 +1,34 @@
+!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!--sebagai judul halaman-->
+<title>Cascade & Inherintance</title>
+<!-- External CSS, untuk menghubungkan halaman dengan berkas CSS eksternal -->
+<link rel="stylesheet" href="/assets/style.css">
+<!-- Internal CSS -->
+<style>
+body {
+border: 1px red solid; /* menetapkan border elemen body menjadi solid dengan warna merah dan ketebalan */
+padding: 30px; /* menetapkan padding untuk elemen body */
+color: blue; /* inheritance (menunjukkan bahwa warna biru diwarisi oleh elemen-elemen di bawahnya) */
+}
+p { 
+color: green !important; /* menetapkan warna teks elemen p menjadi hijau dengan prioritas tertinggi menggunakan important */
+}
+</style>
+</head>
+<body>
+<h1>Title</h1>
+<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias, ratione reiciendis autem fugit ex
+maxime quia pariatur. Incidunt, alias sapiente harum necessitatibus consectetur expedita maxime, quo, non
+ipsum quis optio.</p>
+<div>
+<p style="color: orange;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque iste officiis
+animi expedita mollitia placeat tenetur reiciendis, <strong>sit culpa hic minus officia ad distinctio enim
+dignissimos a iusto, odio corrupti!</strong></p>
+</div>
+</body>

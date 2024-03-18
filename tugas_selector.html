@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!--membuka kepala dokumen html yang berisi meta-data dan tautan ke berkas luar-->
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!--sebagai judul halaman-->
+<title>CSS Selector</title>
+
+<!--membuka tag style-->
+<style>
+/* Adjacent Sibling Selector untuk mengubah warna teks untuk paragraf yang langsung berdekatan dengan h2 */
+h2 + p {
+    color: rgb(67, 67, 211);
+}
+
+/* Child Combinator Selector untuk menerapkan gaya huruf miring untuk paragraf yang merupakan anak langsung dari elemen div */
+div > p {
+    font-style: italic;
+}
+
+/* Negation Selector */
+/* Mengubah warna teks untuk semua paragraf kecuali yang berada di dalam div */
+p:not(div > p) {
+    color: green;
+}
+
+/* General Sibling Selector */
+/* Mengubah warna teks untuk semua elemen p yang merupakan saudara sebaya dari h2 */
+h2 ~ p {
+    font-weight: bold;
+}
+</style> <!--menutup tag style-->
+</head> <!-- menutup bagian kepala dokumen html yang berisi meta-data dan tautan ke berkas luar-->
+
+<body> <!-- mulai bagian tubuh dari dokumen html yang berisi konten yang kaan ditmapilakn di halaman web-->
+<h2>This is Heading Two</h2> <!-- menampilkan elemen h2-->
+<p>This is a sibling paragraph.</p> <!-- menampilkan sebuah paragraf dengan teks-->
+<p>This is another sibling paragraph.</p> <!-- menampilkan paragraf kedua -->
+<div> <!-- mulai sebuah div -->
+    <p>This paragraph is a child of a div.</p> <!-- menampilkan sebuah paragraf anak dari elemen div di atasnya-->
+</div> <!-- menutup tag div yang menandakan akhir dari elemen div-->
+</body> <!-- menutup bagian tubuh dokumen html -->
+</html> <!-- menutup tag yang menandakan akhir dari dokumen html -->

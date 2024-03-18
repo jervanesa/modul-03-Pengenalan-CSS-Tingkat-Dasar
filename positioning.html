@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!--sebagai judul halaman -->
+<title>CSS Positioning</title>
+<style>
+.container { /* mendefinisikan aturan CSS untuk elemen dengan kelas container */
+width: 700px; /* menetapkan lebar */
+height: 500px; /* menetapkan tinggi */
+background-color: rgb(231, 232, 226); /* menetapkan warna latar belakang kelas container */
+/* margin: 0 auto; */
+/* position: relative; */
+}
+.satu, .dua, .tiga { /* mendefinisikan elemen dengan kelas 1, 2 ,3  */
+width:150px; /*menetapkan lebar ketiga elemen */
+height: 150px; /*menetapkan tinggi ketiga elemen */
+font-size: 25px; /* menetapkan ukuran font*/
+line-height: 150px; /* menetapkan ketinggian baris sama dengan tinggi elemen */
+text-align: center; /* menetapkan teks menjadi rata tengah*/
+color: white; /* memberikan warna teks */
+}
+.satu { /*elemen kelas satu */
+background-color: #FF1A00; /* menetapkan warna latar belakang kelas satu*/
+/* position: static; */
+/* position: relative; */
+/* position: absolute; */
+/* position: fixed; */
+/* left: 30px; */
+/* top: 30px; */
+/* position: sticky; */
+/* top: 0px; */
+/* position: absolute; */
+/* left: 10px; */
+/* top: 10px; */
+/* z-index: 1; */
+}
+
+.dua{ /* elemen kelas dua*/
+background-color: #008C00; /* menetapkan warna latar belakang kelas dua*/
+/* position: absolute; */
+/* left: 50px; */
+/* top: 50px; */
+}
+
+.tiga{ /* elemen kelas tiga */
+background-color: #4096EE; /* menetapkan warna latar belakang kelas tiga*/
+/* position: absolute; */
+/* left: 100px; */
+/* top: 100px; */
+} 
+img { /* mendefinikan elemen gambar*/
+width: 500px; /*menetapkan lebar gambar */
+float: none; /* menghapus float jika ada */
+}
+.satu, .dua, .tiga { /* mendefinisikan elemen kelas 1, 2, 3 */
+display: block; /* menjadikan elemen sebagai blok */
+}
+</style>
+</head>
+<body>
+<!-- mendifinisikan div dengan kelas container yang berisi tiga elemen div dengan kelas 1, 2, 3 di dalamnya-->
+<div class="container"> 
+<div class="satu">Box 1</div> 
+<div class="dua">Box 2</div>
+<div class="tiga">Box 3</div>
+</div>
+<p>
+<!--menampilkan sebuah gambar dengan sumber yang diberikan pada atribut src -->
+<img src="/assets/strawberries.jpg">
+</p>
+</body>
+</html>

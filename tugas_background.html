@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="id">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        
+        <!--sebagai judul halaman-->
+        <title>tugas background</title>
+        <style>
+            #image { /* mendefinisikan elemen ID gambar */
+                width: 100%; /* menetapkan lebar */
+                height: 200px; /* menetapkan tinggi */
+                background: url('assets/strawberries.jpg') center/cover no-repeat; /* menetapkan gambar latar belakang menggunakan file assets dengan berada di tengah, menutupi seluruh area, dan tidak diulangi */
+            }
+
+            #color { /* mendefinisikan elemen ID warna*/
+            width: 100%; /* menetapkan lebar */
+            height: 200px; /* menetapkan tinggi */
+            background-color: #513804; /* menetapkan warna latar belakang menggunakan warna RGB */
+            }
+
+            #blend { /* mendefinisikan elemen ID blend*/
+            width: 100%; /* menetapkan lebar*/
+            height: 200px; /* menetapkan tinggi */
+            background: linear-gradient(rgba(242, 221, 190, 0.42), rgba(75, 52, 33, 0.324)), url('assets/strawberries.jpg') center/cover no-repeat; /* menggabungkan gradient linear dan gambar latar belakang yang diterapkan diatas gambar latar belakang dan digbungkan dengan gambar menggunakan mode campuran warna*/
+            background-blend-mode: difference; /*menetapkan mode campuran warna untuk latar belakang */
+            }
+
+            .more { /* menargetkan semua elemen yang memiliki kelas more */
+                font-family: 'Segoe UI', Arial, Helvetica, sans-serif; /* menetapkan jenis font untuk teks di dalam elemen yang memiliki kelas more. jika font Segoe UI tidak tersedia, maka font alternatif yang diberikan adalaah arial, helvetika, sans-serif*/
+                font-size: larger; /* menetapkan ukuran font menjadi larger, yang akan membuat lebih besar daripada ukuran font default*/
+                font-weight: bold; /*  menetapkan tebal font*/
+                letter-spacing: 3px; /* menambahkan jarak antara setiap huruf */
+                padding: 70px 0; /* memberikan padding atas dan bawah sebesar piksel, dan tidak memberikan padding di sisi kanan dan kiri */
+                padding-left: 10px; /* memberikan padding sebesar piksel di sisi kiri */
+                -webkit-text-stroke: 1px black; /* menggambarkan garis hitam sebanyak 1 piksel di sekitar teks. hanya berlaku di browser menggunakan engine Webkit seperti google,safari,chrome */
+            }
+        </style>
+    </head>
+    <body>
+        <!-- menampilkan sebuah div dengan ID image yang memiliki background berupa gambar -->
+        <div id="image"><p class="more">Background Image</p></div>
+        <!-- menampilkan sebuah div dengan ID color yang memiliki background berupa warna -->
+        <div id="color"><p class="more">Background Color</p></div>
+        <!-- menampilkan sebuah div dengan ID blend yang memiliki background berupa campuran antara gambar dengan gradient linear-->
+        <div id="blend"><p class="more">Background Campur</p></div>
+    </body>
+</html>

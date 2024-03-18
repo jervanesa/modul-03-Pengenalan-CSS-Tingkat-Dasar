@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!--sebagai judul halaman-->
+<title>CSS Box Model</title>
+<style>
+* {
+margin: 0; /* mengatur semua margin dan padding menjadi 0 untuk semua elemen dalam dokumen*/
+padding: 0;
+}
+div {
+width: 200px; /* menetapkan lebar */
+height: 60px; /* menetapkan tinggi */
+padding: 10px; /* menetapkan padding */
+border: 10px solid black; /* menetapkan border dengan ketebalan */
+margin: 20px; /* margin untuk elemen div */
+}
+.satu { box-sizing: content-box; } /* untuk elemen dengan kelas 1 dengan menggunakan model kotak content-box*/
+.dua { box-sizing: border-box; } /* untuk elemen dengan kelas 2 dengan menggunakan model kotak border-box*/
+div.container { /* muntuk mendefinisikan elemen div dengan kelas container */
+margin: 0 auto; /* mengatur margin secara otomatis*/
+width: 800px; /* mengatur lebar */
+height: 500px; /* mengatur tinggi */
+border: 2px solid green; /* mengatur border untuk elemen container */
+}
+p { /* mendefinisikan aturan untuk semua elemen p di halaman*/
+background-color: yellow; /* memberikan warna latar belakang kuning untuk elemen p */
+}
+.box{ /* mendefinisikan aturan untuk elemen dengan kelas box*/
+width: 180px; /* menetapkan lebar */
+height: 480px; /* menetapkan tinggi */
+padding: 10px; /* menetapkan padding */
+border: 5px solid green; /* menetapkan border dengan warna hijau tebal*/
+margin: 10px; /* menetapkan margin*/
+float: left; /* menetapkan float dengan posisi kiri*/
+background-color: GreenYellow; /* menetapkan latar belakang dengan warna kuning/hijau */
+text-align: center; /* menetapkan posisi teks*/
+box-sizing: border-box; /* menetapkan box-sizing */
+}
+</style> 
+</head>
+<body>
+<div class="satu">Box Pertama</div>
+<div class="dua">Box Kedua</div>
+<div class="container">
+<div class="box"><p>Box Pertama</p></div>
+<div class="box"><p>Box Kedua</p></div>
+<div class="box"><p>Box Ketiga</p></div>
+<div class="box"><p>Box Keempat</p></div>
+</div>
+</body>
+</html>

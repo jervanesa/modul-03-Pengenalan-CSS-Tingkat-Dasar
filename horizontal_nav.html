@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!--sebagai judul halaman-->
+<title>Horizontal Navigation</title>
+<style>
+    nav ul { /* mengatur tampilan dari elemen ul yang berada di dalam elemen nav*/
+        list-style-type: none; /* menghapus gaya daftar bawaan pada daftar*/
+        margin: 0; /* menghapus margin bawaan dari daftar*/
+        padding: 0; /*menghapus padding bawaan dari daftar */
+        overflow: hidden; /* mevegah overflow dari isi daftar yang melebihi batasannya */
+        background-color: #b8b7b7; /* memberikan warna latar belakang untuk daftar navigasi */
+    }
+
+    nav li { /* mengatur tampilan dari elemen li yang berada di dalam elemen nav*/
+        float: left; /* mengatur elemen li berada dalam satu baris secara horizontal*/
+    }
+
+    nav ul li a { /*mengatur tampilan dari tautan a yang berada dalam elemen li di dalam elemen ul di dalam elemen nav */
+        display: block; /* mengatur agar tautan menempati seluruh lebar dari elemen li*/
+        color: rgb(255, 255, 255); /* memberikan warna teks putih untuk tautan */
+        text-align: center; /* mengatur teks tautan menjadi rata tengah*/
+        padding: 14px 16px; /* memberikan padding pada tautan*/
+        text-decoration: none; /* menghapus dekorasi bawaan tautan */
+        border-bottom: 2px solid transparent; /* Menambahkan garis bawah */
+    }    
+
+    nav li a::after { /* menambahkan elemen pseudo ::after untuk tautan di dalam elemen li di dalam elemen nav */
+        content: ''; /* menetapkan konten kosong*/
+        display: block; /* menjadikan elemen sebagai blok */
+        width: 0; /*menetapkan lebar */
+        height: 2px; /* menetapkan tinggi */
+        background-color: rgb(50, 137, 155); /* memberikan warrna untuk garis bawah*/
+        position: absolute; /*menempatkan garis bawah di bawah tautan */
+        bottom: 0; 
+        left: 50%; 
+        transition: width 0.3s ease; /* mengatur transisi untuk lebar garis bawah*/
+    }
+
+    nav ul li a:hover { /* menampilkan tautan ketika dihover*/
+        background-color: #4b4949; /* memberikan warna latar belakang yang berbeda ketika di hover */
+        border-bottom: 2px solid rgb(66, 144, 163); /* Mengubah warna garis bawah saat dihover */
+    }
+
+    .active { /* mengatur tampilan tautan yang memiliki kelas active */
+        background-color: #499fa7; /* memberikan warna latar belakang yang berbeda untuk tautan yang aktif*/
+    }
+</style>
+</head>
+<body>
+
+<nav>
+    <ul>
+        <li><a href="#" class="active">Home</a></li> <!--menampilkan tautan home yang aktif -->
+        <li><a href="#">Service</a></li> <!-- menampilkan tautan service -->
+        <li><a href="#">Project</a></li> <!-- menampilkan tautan project-->
+        <li><a href="#">About</a></li> <!-- menampilkan tautan about-->
+    </ul>
+</nav>
+
+</body>
+</html>
